@@ -10,9 +10,6 @@ Includes:
 
 Built with love (and slight chaos).
 
-Live site:
-https://YOURUSERNAME.github.io/valentine/
 
----
 
 Made by Jazmin 💗
