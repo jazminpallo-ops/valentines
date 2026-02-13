@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Valentine Card for Ana 💌</title>
+
+  <style>
+    :root{
+      --bg:#fff0f6;
+      --card:#ffffff;
+      --text:#1f1f1f;
+      --muted:#5c5c5c;
+      --accent:#ff4d88;
+      --accent2:#ffd1e1;
+      --shadow: 0 10px 40px rgba(0,0,0,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top, #ffe0ee, var(--bg));
+      color:var(--text);
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+    .wrap{ width:min(720px, 100%); display:flex; flex-direction:column; gap:16px; }
+    .card{
+      background:var(--card);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .topline{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background: #fff7fb;
+      border: 1px solid #ffd6e7;
+      color: #a01445;
+      font-weight:700;
+      font-size:14px;
+    }
+    h1{
+      margin:10px 0 6px;
+      font-size: clamp(24px, 4.5vw, 40px);
+      line-height:1.1;
+    }
+    .sub{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      margin-top:14px;
+    }
+    @media (max-width: 740px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+    .img{
+  width:100%;
+  height:260px;           /* ← change this height */
+  border-radius:18px;
+  overflow:hidden;
+  border: 1px solid #ffe0ee;
+  background:#fff;
+}
+
+.img img{
+  width:100%;
+  height:100%;
+  object-fit: cover;      /* ← fills + crops nicely */
+  object-position: center;
+}
+
+    .voucher{
+      border-radius:18px;
+      border: 2px dashed #ff7aa8;
+      padding:16px;
+      background: linear-gradient(180deg, #fff, #fff7fb);
+    }
+    .voucher h2{ margin:0 0 8px; font-size:20px; }
+    .voucher .row{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin: 10px 0 0;
+    }
+    .pill{
+      background: var(--accent2);
+      color:#7a1230;
+      border-radius:999px;
+      padding:8px 10px;
+      font-weight:700;
+      font-size:13px;
+    }
+    .btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    button, a.btn{
+      border:0;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:8px 10px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:13px;
+    }
+    .primary{ background: var(--accent); color:white; }
+    .ghost{ background:#fff; border:1px solid #ffd1e1; color:#a01445; }
+    .section-title{
+      margin:0 0 10px;
+      font-size:18px;
+    }
+    ul{ margin:0; padding-left:20px; color:var(--muted); }
+    li{ margin:8px 0; }
+    .note{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
+    .hearts{
+      position:absolute;
+      inset:-40px -40px auto auto;
+      font-size:42px;
+      opacity:.18;
+      transform: rotate(8deg);
+      user-select:none;
+      pointer-events:none;
+    }
+    .plan-grid{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  margin-top:14px;
+}
+
+.plan-item{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:#fff7fb;
+  border:1px solid #ffd6e7;
+  padding:14px;
+  border-radius:16px;
+}
+
+.icon{
+  font-size:24px;
+}
+
+.plan-item strong{
+  display:block;
+  font-size:15px;
+  margin-bottom:4px;
+}
+
+.plan-item p{
+  margin:0;
+  font-size:14px;
+  color:#5c5c5c;
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HERO CARD -->
+    <section class="card">
+      <div class="hearts">💘💗💞💕</div>
+      <div class="topline">
+        <span class="badge">💌 Valentine’s Day Card</span>
+        <span class="badge" id="where">📍 Ana is in LA</span>
+      </div>
+
+      <h1>Happy Valentine's Day Amor 💗</h1>
+      <p class="sub">
+        Thank you for the gift you got me! It's so cute ☺️
+        Although we can't spend the day together...
+        Here is a little something from me 😉
+      </p>
+
+      <div class="grid">
+        <div class="img">
+          <!-- Put your own image here (same folder) OR replace src with a GIF URL -->
+          <img src="Ana3.png" alt="Us / cute image 1">
+        </div>
+
+        <div class="voucher">
+          <h2>🎟️ Massage Voucher</h2>
+          <p class="sub" style="margin:0;">
+            Redeem for <b>one</b> (1). 
+            <br>A cosy at home massage.
+            And kisses from your girlfriend at no extra cost.
+          </p>
+
+          <div class="row">
+            <span class="pill">Expiry: Never</span>
+            <span class="pill">Valid: Anytime</span>
+          </div>
+
+          <div class="btns">
+            <button class="primary" id="redeemBtn">Redeem now 😈</button>
+            <button class="ghost" id="saveBtn">Save for later 🧾</button>
+          </div>
+
+          <p class="note" id="voucherMsg" style="margin-top:10px;"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS CARD -->
+    <section class="card">
+      <h2 class="section-title">🗓️ Our plans</h2>
+      <p class="sub" style="margin-top:0;">
+        Although we can't celebrate today, I can't wait to celebrate in March!
+        <br>I know we still need to fully plan this pero some proposed plans...
+      </p>
+
+      <div class="plan-grid">
+
+  <div class="plan-item">
+    <div class="icon">📅</div>
+    <div>
+      <strong>Date</strong>
+      <p>7–8 March</p>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="icon">📍</div>
+    <div>
+      <strong>Location</strong>
+      <p>TBC (AirBnB by the sea with a hot tub?)</p>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="icon">✨</div>
+    <div>
+      <strong>Extras</strong>
+      <p>Dinner, long walks and full relaxation mode</p>
+    </div>
+  </div>
+
+</div>
+
+    </section>
+
+    <!-- EXTRA CUTE CARD -->
+    <section class="card">
+      <h2 class="section-title">📸 A little “us” corner a la distancia</h2>
+      <p class="sub" style="margin-top:0;">Amor, thank you for letting me be a part of your life 😭💗</p>
+
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="img"><img src="Us1.png" alt="Cute image 2"></div>
+        <div class="img"><img src="Us2.png" alt="Cute image 3"></div>
+      </div>
+
+      <p class="footer">Made by Jazmin 💘</p>
+    </section>
+
+  </div>
+
+  <script>
+    // Optional: tweak the location badge depending on where she is today
+    // You said she's in Vegas right now:
+    document.getElementById("where").textContent = "📍 Currently in Las Vegas";
+
+    const voucherMsg = document.getElementById("voucherMsg");
+    const redeemBtn = document.getElementById("redeemBtn");
+    const saveBtn = document.getElementById("saveBtn");
+
+    redeemBtn.addEventListener("click", () => {
+      voucherMsg.textContent = "Voucher accepted ✅ Please present forehead for kisses 💋";
+      sprinkleHearts();
+    });
+
+    saveBtn.addEventListener("click", () => {
+      voucherMsg.textContent = "Saved 🧾 Redeem whenever you want. Expiry: literally never.";
+      sprinkleHearts();
+    });
+
+    function sprinkleHearts(){
+      const hearts = ["💗","💖","💘","💕","💞"];
+      for(let i=0;i<18;i++){
+        const s = document.createElement("div");
+        s.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+        s.style.position="fixed";
+        s.style.left = Math.random()*100 + "vw";
+        s.style.top = "-5vh";
+        s.style.fontSize = (16 + Math.random()*18) + "px";
+        s.style.transition = "transform 1.3s ease, opacity 1.3s ease";
+        s.style.zIndex = 9999;
+        document.body.appendChild(s);
+
+        requestAnimationFrame(()=>{
+          s.style.transform = `translateY(${110 + Math.random()*20}vh) rotate(${Math.random()*360}deg)`;
+          s.style.opacity = "0";
+        });
+
+        setTimeout(()=>s.remove(), 1400);
+      }
+    }
+  </script>
+</body>
+</html>
